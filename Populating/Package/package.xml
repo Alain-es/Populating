@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>Populating.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>Populating.dll</orgName>
+    </file>
+    <file>
+      <guid>package.manifest</guid>
+      <orgPath>/App_Plugins/Populating</orgPath>
+      <orgName>package.manifest</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Populating</name>
+      <version>0.1.0</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>Populating</url>
+      <requirements>
+        <major>7</major>
+        <minor>1</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Populating</name>
+      <website>-</website>
+    </author>
+    <readme><![CDATA[Populating v0.1.0 requires Umbraco v7.1.0 or above]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes>
+  </DataTypes>  
+  <Actions>
+    <Action runat="install" alias="addDashboardSection" dashboardAlias="Populating">
+      <section>
+        <areas>
+          <area>developer</area>
+        </areas>
+        <tab caption="Populating">
+          <control>/App_Plugins/Populating/Dashboard/_dashboard.html</control>
+        </tab>
+      </section>
+    </Action>
+  </Actions>
+</umbPackage>

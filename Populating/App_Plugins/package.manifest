@@ -1,0 +1,10 @@
+﻿{   
+    javascript: [
+		'~/App_Plugins/Populating/Dashboard/populating.dashboard.controller.js', 
+		'~/App_Plugins/Populating/populating.resource.js'
+    ],
+    css: [
+		'~/App_Plugins/Populating/populating.css'
+    ]
+}
+ 
