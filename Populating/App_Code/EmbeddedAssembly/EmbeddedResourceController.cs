@@ -33,36 +33,6 @@ namespace Populating.EmbeddedAssembly
             return GetResource(path, resource);
         }
 
-        public FileStreamResult GetResourcePath3(string directory1, string directory2, string directory3, string resource)
-        {
-            var path = string.Format("/{0}/{1}/{2}/", directory1, directory2, directory3);
-            return GetResource(path, resource);
-        }
-
-        public FileStreamResult GetResourcePath4(string directory1, string directory2, string directory3, string directory4, string resource)
-        {
-            var path = string.Format("/{0}/{1}/{2}/{3}/", directory1, directory2, directory3, directory4);
-            return GetResource(path, resource);
-        }
-
-        public FileStreamResult GetResourcePath5(string directory1, string directory2, string directory3, string directory4, string directory5, string resource)
-        {
-            var path = string.Format("/{0}/{1}/{2}/{3}/{4}/", directory1, directory2, directory3, directory4, directory5);
-            return GetResource(path, resource);
-        }
-
-        public FileStreamResult GetResourcePath6(string directory1, string directory2, string directory3, string directory4, string directory5, string directory6, string resource)
-        {
-            var path = string.Format("/{0}/{1}/{2}/{3}/{4}/{5}/", directory1, directory2, directory3, directory4, directory5, directory6);
-            return GetResource(path, resource);
-        }
-
-        public FileStreamResult GetResourcePath7(string directory1, string directory2, string directory3, string directory4, string directory5, string directory6, string directory7, string resource)
-        {
-            var path = string.Format("/{0}/{1}/{2}/{3}/{4}/{5}/{6}/", directory1, directory2, directory3, directory4, directory5, directory6, directory7);
-            return GetResource(path, resource);
-        }
-
         private FileStreamResult GetResource(string url, string resource)
         {
             try
@@ -84,7 +54,7 @@ namespace Populating.EmbeddedAssembly
             }
             catch (Exception ex)
             {
-                LogHelper.Warn(typeof(EmbeddedResourceController), string.Format("Couldn't get the resource: {0}{1} {2}{3}", url, resource, Environment.NewLine, ex.Message));
+                LogHelper.Error(typeof(EmbeddedResourceController), string.Format("Couldn't get the resource: {0}{1}", url, resource), ex);
             }
 
             return null;
